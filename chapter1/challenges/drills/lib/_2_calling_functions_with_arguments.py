@@ -15,8 +15,11 @@
 #   Call:    starts_with_the_letter_a("Rock")
 #   Returns: False
 def starts_with_the_letter_a(string):
-    # your code goes here (delete the pass below)
-    pass
+    if string.startswith('a') or string.startswith('A'):
+        return True
+    else:
+        return False
+print (starts_with_the_letter_a("Hello"))    
 
 
 # Purpose: checks if a string ends with the letter a
