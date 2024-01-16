@@ -15,11 +15,11 @@
 #   Call:    starts_with_the_letter_a("Rock")
 #   Returns: False
 def starts_with_the_letter_a(string):
-    if string.startswith('a') or string.startswith('A'):
+    if string[0]  == "A" or string[0] == "a":
         return True
     else:
         return False
-print (starts_with_the_letter_a("Hello"))    
+print (starts_with_the_letter_a("apple"))    
 
 
 # Purpose: checks if a string ends with the letter a
@@ -31,8 +31,11 @@ print (starts_with_the_letter_a("Hello"))
 #   Call:    ends_with_the_letter_a("Python")
 #   Returns: False
 def ends_with_the_letter_a(string):
-    # your code goes here (delete the pass below)
-    pass
+    if string.endswith("a") or string.endswith("A"):
+        return True
+    else:
+        return False
+print (ends_with_the_letter_a("JAVA"))
 
 
 # Purpose: checks if a string contains the word hello
