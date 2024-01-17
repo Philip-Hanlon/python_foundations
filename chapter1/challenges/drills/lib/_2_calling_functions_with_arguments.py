@@ -75,7 +75,7 @@ print (substitute_hello_with_goodbye("hello folks"))
 #   Call:    remove_x("OXO")
 #   Returns: "OO"
 def remove_x(string):
-    return string.replace('x', '')
+    return string.replace('x', '').replace('X', '')
 print (remove_x("oxo"))
 
 
