@@ -47,8 +47,11 @@ print (ends_with_the_letter_a("JAVA"))
 #   Call:    contains_hello("world")
 #   Returns: False
 def contains_hello(string):
-    # your code goes here (delete the pass below)
-    pass
+    if "hello" in string.lower():
+        return True
+    else:
+        return False
+print (contains_hello("world"))    
 
 
 # Purpose: replaces the word hello with the word goodbye
@@ -60,8 +63,9 @@ def contains_hello(string):
 #   Call:    substitute_hello_with_goodbye("Hello folks")
 #   Returns: "Hello folks"
 def substitute_hello_with_goodbye(string):
-    # your code goes here (delete the pass below)
-    pass
+    substituted_string = string.replace("hello", "goodbye")
+    return substituted_string
+print (substitute_hello_with_goodbye("hello folks"))    
 
 
 # Purpose: removes the letter x from a string
@@ -71,8 +75,8 @@ def substitute_hello_with_goodbye(string):
 #   Call:    remove_x("OXO")
 #   Returns: "OO"
 def remove_x(string):
-    # your code goes here (delete the pass below)
-    pass
+    return string.replace('x', '')
+print (remove_x("oxo"))
 
 
 # Purpose: returns the first half of a string
@@ -81,8 +85,10 @@ def remove_x(string):
 #   Returns: "cod"
 # Note: you can assume the string will always have an even number of characters
 def first_half(string):
-    # your code goes here (delete the pass below)
-    pass
+    half_length = len(string) // 2
+    first_half_string = string[:half_length]
+    return first_half_string
+print (first_half("coding"))
 
 
 # Purpose: returns the second half of a string
@@ -91,8 +97,9 @@ def first_half(string):
 #   Returns: "ing"
 # Note: you can assume the string will always have an even number of characters
 def second_half(string):
-    # your code goes here (delete the pass below)
-    pass
+    half_length = string[len(string)//2:]
+    return half_length
+print (second_half("coding"))    
 
 
 # Congrats, you're done with this file. Move on to the next one.
