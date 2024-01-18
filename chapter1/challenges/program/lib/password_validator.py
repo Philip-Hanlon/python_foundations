@@ -18,5 +18,13 @@
 # == YOUR CODE ==
 
 def is_valid(password):
-    pass # Your code goes here (delete the `pass`)
+     if len(password) < 8:
+        return False
+     elif '!' not in password and '$' not in password and '%' not in password and '&' not in password:
+        return False
+     else:
+        return True
+print (is_valid("1234578$"))   
+     
+   
 
