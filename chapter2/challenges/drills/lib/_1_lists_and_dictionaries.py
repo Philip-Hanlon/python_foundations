@@ -215,7 +215,11 @@ print(add_to_list(["a", "b", "c"], "d"))
 # Example:
 #   Call:    new_band_member({"bass": "flea"})
 #   Returns: {"vocalist": "miss piggy", "lead_guitar": "scooter", "bass": "flea"}
-
+def new_band_member(one_dictionary):
+    existing_band_members = {"vocalist": "miss piggy", "lead_guitar": "scooter"}
+    existing_band_members.update(one_dictionary)
+    return existing_band_members
+print (new_band_member({"bass": "flea"}))
 
 
 # Method name: all_values
@@ -224,6 +228,11 @@ print(add_to_list(["a", "b", "c"], "d"))
 # Example:
 #   Call:    all_values({"a": 1, "b": 2, "c": 3})
 #   Returns: [1, 2, 3]
+def all_values(one_dictionary):
+    values = list(one_dictionary.values())
+    return values    
+print(all_values({"a": 1, "b": 2, "c": 3}))
+
 
 
 
@@ -233,7 +242,10 @@ print(add_to_list(["a", "b", "c"], "d"))
 # Example:
 #   Call:    all_keys({"a": 1, "b": 2, "c": 3})
 #   Returns: ["a", "b", "c"]
-
+def all_keys(one_dictionary):
+    keys = list(one_dictionary.keys())
+    return keys 
+print (all_keys({"a": 1, "b": 2, "c": 3}))
 
 
 # Method name: remove_nones_from_dictionary
@@ -242,7 +254,14 @@ print(add_to_list(["a", "b", "c"], "d"))
 # Example:
 #   Call:    remove_nones_from_dictionary({"a": 1, "b": None, "c": 3})
 #   Returns: {"a": 1, "c": 3}
-
+def remove_nones_from_dictionary(one_dictionary):
+    result_dict = {}
+    for key, value in one_dictionary.items():
+        if value is not None:
+            result_dict[key] = value
+    return result_dict
+print (remove_nones_from_dictionary({"a": 1, "b": None, "c": 3}))        
+                                           
 
 
 
@@ -252,4 +271,7 @@ print(add_to_list(["a", "b", "c"], "d"))
 # Example:
 #   Call:    touch_in('Aldgate East', '2022/01/30 17:12')
 #   Returns: {'entrypoint': 'Aldgate East', 'time': '2022/01/30 17:12'}
+def touch_in(tube_station, time):
+    return {'entrypoint': tube_station, 'time': time}
+print (touch_in('Aldgate East', '2022/01/30 17:12'))
 
