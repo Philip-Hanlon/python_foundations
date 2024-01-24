@@ -21,7 +21,19 @@
 #   Call:    fourth_element([1, 2, 3, 4, 5])
 #   Returns: 4
 
+class Character:
+    def __init__(self, health, damage, speed):
+        self.health = health
+        self.damage = damage
+        self.speed = speed
 
+warrier = Character (100, 30, 30)
+ninja = Character (80, 40, 60)      
+
+print (f"warrier speed: {warrier.speed}")
+
+
+        
 
 # Method name: average
 # Purpose: returns the average (the mean) of the given list
