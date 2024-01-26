@@ -21,16 +21,16 @@
 #   Call:    fourth_element([1, 2, 3, 4, 5])
 #   Returns: 4
 
-class Character:
-    def __init__(self, health, damage, speed):
-        self.health = health
-        self.damage = damage
-        self.speed = speed
-
-warrier = Character (100, 30, 30)
-ninja = Character (80, 40, 60)      
-
-print (f"warrier speed: {warrier.speed}")
+def fourth_element(one_list):
+     if len(one_list) >= 4:
+         return one_list[3]
+     else:
+         return "List not long enough"
+    
+one_list = [1, 2, 3, 4]
+result = fourth_element(one_list)
+    
+print (result)
 
 
         
@@ -42,6 +42,13 @@ print (f"warrier speed: {warrier.speed}")
 #   Call:    average([3, 1, 44, 1])
 #   Returns: 12.25
 
+def average (one_list):
+    return sum(list) / len(list) 
+list = [3, 1, 44, 1] 
+Average = average(list) 
+
+print(average(Average))
+
 
 
 # Method name: lowest_squared
@@ -51,6 +58,26 @@ print (f"warrier speed: {warrier.speed}")
 #   Call:    lowest_squared([5, 3, 44, 7])
 #   Returns: 9
 
+def lowest_squared(one_list):
+    my_lowest_sqaure = 0
+    my_result = 0
+    for  myint in one_list:
+        my_lowest_sqaure = myint * myint
+        if myint * myint < my_result or my_result == 0:
+            my_result = my_lowest_sqaure
+
+
+    return my_result
+my_list = [5, 3, 44, 7]
+result = lowest_squared(my_list)
+print(result)
+
+def lowest_square(one_list):
+    return min(x * x for x in one_list)
+
+my_list = [5, 3, 44, 7]
+result = lowest_square(my_list)
+print(result)
 
 
 # Method name: highest_squared
